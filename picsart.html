@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picsart</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'picsart.css' %}">
+    <style>
+        body {
+            background: linear-gradient(120deg, #f0e130, #ff6b6b, #1e90ff);
+            font-family: Arial, sans-serif;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .intro-message {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px; /* Reduced padding for smaller size */
+            border-radius: 10px;
+            font-size: 1.2em; /* Smaller font size */
+            text-align: center;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+            transition: transform 0.3s;
+        }
+
+        .intro-message:hover {
+            transform: perspective(500px) rotateX(10deg) rotateY(10deg);
+        }
+
+        .picsart {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            animation: slideIn 2s ease-out;
+            width: 95vw;
+            height: 95vh;
+            max-width: 1200px;
+            max-height: 700px;
+        }
+
+        iframe {
+            border: none;
+            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 20px; /* Adjust as needed */
+        }
+
+        .animated-button {
+            background: linear-gradient(45deg, #ff6b6b, #f0e130, #1e90ff, #ff1493);
+            border: none;
+            border-radius: 50px;
+            color: white;
+            padding: 10px 20px;  /* Smaller padding for a smaller button */
+            font-size: 16px;  /* Smaller font size for better readability */
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-position 0.5s, transform 0.2s;
+            background-size: 400%;
+        }
+
+        .animated-button:hover {
+            background-position: 100% 0;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="intro-message">
+        <strong>Congratulations! You have entered the virtual world! Experience that world</strong>
+    </div>
+
+    <section id="AI">
+        <div class="picsart">
+            <iframe src="https://picsart.com/"></iframe>
+        </div>
+    </section>
+
+
+
+    <script src="{% static 'picsart.js' %}"></script>
+</body>
+</html>

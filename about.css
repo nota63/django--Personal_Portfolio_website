@@ -1,0 +1,228 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+header {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em; /* Smaller font size */
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+}
+
+.hero {
+    background: url('{% static "images/hero-bg.jpg" %}') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.hero-content {
+    animation: fadeIn 2s;
+    position: relative;
+    z-index: 1;
+}
+
+.profile-pic {
+    width: 120px; /* Smaller size */
+    height: 120px; /* Smaller size */
+    border-radius: 50%;
+    border: 4px solid #ff6347; /* Slightly smaller border */
+    margin-bottom: 15px; /* Smaller margin */
+    transition: transform 0.3s;
+}
+
+.profile-pic:hover {
+    transform: rotateY(360deg);
+}
+
+.hero h1 {
+    font-size: 2.5em; /* Smaller font size */
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.2em; /* Smaller font size */
+    margin: 10px 0;
+}
+
+.services {
+    padding: 40px; /* Smaller padding */
+    background-color: #1a1a1a;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2em; /* Smaller font size */
+    margin-bottom: 15px; /* Smaller margin */
+    position: relative;
+}
+
+.services h2::after {
+    content: '';
+    width: 80px; /* Smaller width */
+    height: 2px; /* Smaller height */
+    background: #ff6347;
+    display: block;
+    margin: 8px auto 0; /* Smaller margin */
+}
+
+.service-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    background-color: #333;
+    padding: 15px; /* Smaller padding */
+    margin: 10px;
+    border-radius: 10px;
+    width: 28%; /* Adjusted width */
+    min-width: 200px; /* Adjusted minimum width */
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-item i {
+    font-size: 2.5em; /* Smaller font size */
+    color: #ff6347;
+    margin-bottom: 10px;
+}
+
+.service-item h3 {
+    font-size: 1.3em; /* Smaller font size */
+    margin: 10px 0;
+}
+
+.service-item p {
+    font-size: 0.9em; /* Smaller font size */
+    color: #bbb;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.bubble {
+    position: absolute;
+    bottom: -150px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 99, 71, 0.5);
+    border-radius: 50%;
+    animation: rise 20s infinite ease-in;
+    z-index: 0;
+}
+
+@keyframes rise {
+    0% {
+        bottom: -150px;
+        transform: translateX(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        bottom: 100%;
+        transform: translateX(calc(100vw - 50%));
+        opacity: 0;
+    }
+}
+
+/* General styling for the section */
+#tech {
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+/* Styling for the technologies container */
+.technologies {
+    text-align: center;
+}
+
+.tech-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Adjusted min size */
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+}
+
+/* Styling for the images */
+.tech-list img {
+    border: 2px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Hover effect for the images */
+.tech-list img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.8);
+}
+
+/* Keyframes for the glowing animation */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(255, 255, 0, 1);
+    }
+}

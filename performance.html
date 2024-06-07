@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Performance Review Graph</title>
+     {% load static %}
+    <link rel="stylesheet" href="{% static 'performance.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Website Performance Review Graph</h1>
+    <div class="container">
+        <div class="chart-container">
+            <canvas id="siteConsumptionTrend"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="trafficSources"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="averageVisitTime"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="onlineTransaction"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="typeOfVisitors"></canvas>
+        </div>
+    </div>
+ <script src="{% static 'performance.js' %}"></script>
+</body>
+</html>

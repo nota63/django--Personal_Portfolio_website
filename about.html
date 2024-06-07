@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'about.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About Me</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Clients</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="about">
+        <div class="hero">
+            <div class="hero-content">
+                <img src="{% static 'vv.jpeg' %}" alt="Profile Picture" class="profile-pic">
+                <h1>I Am Harshad</h1>
+                <p>Creative Backend Developer</p>
+            </div>
+        </div>
+        <div class="services">
+            <h2>My Services</h2>
+            <div class="service-list">
+                <div class="service-item">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Web Design</h3>
+                    <p>Creating responsive and visually appealing web designs using the latest technologies.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-database"></i>
+                    <h3>Database Management</h3>
+                    <p>Expert in designing and managing efficient database systems using SQLite and PostgreSQL.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-server"></i>
+                    <h3>Backend Development</h3>
+                    <p>Building robust backend systems with Python and Django.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tech">
+        <div class="technologies">
+              <h2>Technologies I Use</h2>
+            <div class="tech-list">
+                <img src="https://static.djangoproject.com/img/logos/django-logo-negative.png" height="30" alt="Django">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" height="30" alt="ChatGPT">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/SQLite370.svg" height="30" alt="SQLite3">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Flask_logo.svg" height="30" alt="Flask">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" height="30" alt="LeetCode">
+                <img src="https://th.bing.com/th/id/OIP.bf7SxDB-YrRctLujg2b8ngHaFT?w=502&h=360&rs=1&pid=ImgDetMain" height="30" alt="Github">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" height="30" alt="Python">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" height="30" alt="HTML">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" height="30" alt="CSS">
+        </div>
+    </section>
+
+
+    <script src="{% static 'about.js' %}"></script>
+</body>
+</html>

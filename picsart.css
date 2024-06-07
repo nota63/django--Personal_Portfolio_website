@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.intro-message strong {
+    display: inline-block;
+    font-size: 24px;
+    color: #000;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid orange;
+    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: orange; }
+}
+
+section {
+    margin-top: 20px;
+}
+
+.picsart iframe {
+    border: none;
+    box-shadow: 0 0 15px rgba(173, 216, 230, 0.8);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 5px rgba(173, 216, 230, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(173, 216, 230, 1);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(173, 216, 230, 0.5);
+    }
+}

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'music.css' %}">
+</head>
+<body>
+    <div class="intro-text" id="introText">Welcome to my built-in music player, listen to your mind</div>
+    <iframe src="https://streamsquid.com/#/browse/newrel" height="500" width="800"></iframe>
+
+    <script src="{% static 'music.js' %}"></script>
+</body>
+</html>

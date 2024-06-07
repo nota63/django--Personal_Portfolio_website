@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'inventory.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Our Services</h1>
+        <div class="service" id="service-django">
+            <img src="https://1.bp.blogspot.com/-PWn7mDqEvD4/XVNKZtkEHgI/AAAAAAAAA1Y/8KjF1zbA5gIuPiG3yTBYZT8gSYZjWs0iwCLcBGAs/s1600/DJANGO%2B-%2BIDNGRAFIS.jpg" height="50" alt="Django Icon">
+            <h2>Website with Backend (Django) - ₹25000</h2>
+        </div>
+        <div class="service" id="service-static">
+            <img src="https://w7.pngwing.com/pngs/585/981/png-transparent-html-js-and-css-logo-cascading-style-sheets-javascript-html-css3-jquery-logo-miscellaneous-text-trademark.png" height="50" alt="Static Icon">
+            <h2>Static Website (HTML, CSS, JS) - ₹15000</h2>
+        </div>
+        <div class="service" id="service-mobile">
+            <img src="https://th.bing.com/th/id/OIP.BF_fMt8nZ34_rVfRgafgLQHaDt?rs=1&pid=ImgDetMain" height="50" alt="Mobile App Icon">
+            <h2> A Complete Mobile App  - ₹30000</h2>
+        </div>
+        <div class="service" id="service-ecommerce">
+            <img src="https://th.bing.com/th/id/OIP.tv04p4t35hQYkb1GXyRGggHaE7?rs=1&pid=ImgDetMain" height="50" alt="Ecommerce Icon">
+            <h2>Ecommerce Website - ₹40000</h2>
+        </div>
+        <div class="service" id="service-ecommerce-app">
+            <img src="https://th.bing.com/th/id/OIP.fo3-w61O2W6c7pJZ02rkCAHaHa?rs=1&pid=ImgDetMain" height="50" alt="Ecommerce App Icon">
+            <h2>Ecommerce App - ₹100000</h2>
+        </div>
+    </div>
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>Service Details</h2>
+            <form id="service-form">
+                <label for="requirements">Your Requirements:</label>
+                <textarea id="requirements" name="requirements" rows="4" cols="50"></textarea>
+                <button type="button" id="get-price">Get Price</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="popup" id="purchase-popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>Price To Pay: ₹<span id="random-price"></span></h2>
+            <button type="button" id="purchase">Purchase</button>
+        </div>
+    </div>
+
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+        <p>Your request has been raised, wait for a reply...</p>
+    </div>
+
+    <script src="{% static 'inventory.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio - Harshad Dudhabarve</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Adams</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+<!--                <li><a href="#about">About</a></li>-->
+            </ul>
+        </nav>
+    </header>
+    <section id="home">
+        <div class="intro">
+            <h1>I'm <span>Harshad Dudhabarve</span></h1>
+            <p>A freelancer who provides services for digital programming and design content needs, for all businesses with more than 10 years of experience</p>
+            <div class="buttons">
+                <a href="#portfolio" class="btn">My Work</a>
+                <a href="#contact" class="btn">Hire Me</a>
+            </div>
+        </div>
+        <div class="profile-pic">
+            <img src="{% static 'v.jpeg' %}" alt="James Adams">
+        </div>
+        <div class="social-links">
+            <u>Tap Them! To Follow me on</u>
+            <a href="https://www.instagram.com/curious_coder3/">
+                <img src="https://th.bing.com/th/id/OIP.akd5Zua7121hxmhwiN1JQgAAAA?rs=1&pid=ImgDetMain" height="50" class="social-icon instagram">
+            </a>
+            <a href="https://github.com/nota63">
+                <img src="https://th.bing.com/th/id/OIP.EIv8AtkFNkOr6gzN4gydqQAAAA?rs=1&pid=ImgDetMain" height="50" class="social-icon github">
+            </a>
+            <a href="https://www.facebook.com/vishal.dudhabarve.31">
+                <img src="https://th.bing.com/th/id/R.f9cc6f8e30b324f4f9e44cb337637521?rik=Q51a8s8R9f7B2g&riu=http%3a%2f%2fcurtisopticians.com%2fwp-content%2fuploads%2f2019%2f11%2fcurtis-facebook-REALblue.jpg&ehk=%2fiessyrESbm%2bdAxKTpFhhJF40Vdv%2bsv72sfpMp1FkIU%3d&risl=&pid=ImgRaw&r=0" height="50" class="social-icon facebook">
+            </a>
+            <a href="https://www.linkedin.com/in/harshad-dudhabarve-3709302a1/">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/2048px-LinkedIn_icon.svg.png" height="50" class="social-icon linkedin">
+            </a>
+        </div>
+    </section>
+
+<!--    About section-->
+    <section id="about1">
+        <div class="about1">
+            <p>Click about me to see my about section</p>
+            <a href="{% url 'about' %}">
+                <img src="https://th.bing.com/th/id/OIP.Ow27D-9R66Av1bG4WlC0GAAAAA?rs=1&pid=ImgDetMain" height="100" width="100">
+            </a>
+        </div>
+ </section>
+<!--        inventory-->
+    <section id="inventory">
+        <div class="inventory">
+            <a href="{% url 'inventory' %}">
+                <img src="https://www.smbceo.com/wp-content/uploads/2019/08/online-inventory-management-system-500.jpg" height="100" width="100">
+            </a>
+        </div>
+         <p>want to build your website! click here to place your order we offers affordable websites, apps and many more</p>
+    </section>
+
+<!--    calculator section-->
+    <section id="1">
+        <div class="1">
+            <a href="{% url 'calculator' %}">
+                <img src="https://th.bing.com/th/id/OIP.xkRrAOYlsJpclaijse9SoAAAAA?rs=1&pid=ImgDetMain" height="100" width="100">
+            </a>
+        </div>
+        <p>calculator! do your calculations</p>
+    </section>
+
+<!--    MUSIC SECTION-->
+    <section id="2">
+        <div class="music">
+            <a href="{% url 'music' %}">
+                <img src="https://static.vecteezy.com/system/resources/previews/023/578/713/non_2x/generative-ai-background-banner-music-and-sound-with-some-technology-orange-and-dark-blue-color-gold-music-notes-and-treble-clef-on-line-wave-of-sound-tune-illustration-template-for-music-festival-photo.jpg" height="100">
+            </a>
+        </div>
+    </section>
+<!--    own creation section-->
+    <section id="items">
+        <div class="items">
+            <strong>Check out my own creations!</strong>
+            <a href="https://nota63.github.io/weather-app---using-api/">Weather Webapp</a>
+            <br>
+            <a href="https://nota63.github.io/Personal-multifunctional-web/">Portfolio Website</a>
+            <br>
+            <a href="https://nota63.github.io/Qr-Code_Generator-Static-/">Qr Code Generator</a>
+            <br>
+            <a href="https://nota63.github.io/Expence-Tracker/">Expence Tracker</a>
+        </div>
+    </section>
+<!--    performance section-->
+    <section id="performance">
+        <div class="performance">
+            <strong>Click me! To see My websites Performance</strong>
+            <a href="{% url 'performance' %}">
+                <img src="https://icon-library.com/images/performance-icon/performance-icon-15.jpg" height="70" width="70">
+            </a>
+        </div>
+    </section>
+<!--button section-->
+<div class="container">
+    <button class="animated-button" onclick="window.location.href='{% url 'picsart' %}'">Edit Photos!</button>
+</div>
+
+<style>
+    .container {
+        text-align: center;
+        margin-top: 20px; /* Adjust as needed */
+    }
+
+    .animated-button {
+        background: linear-gradient(45deg, #ff6b6b, #f0e130, #1e90ff, #ff1493);
+        border: none;
+        border-radius: 50px;
+        color: white;
+        padding: 10px 20px;  /* Smaller padding for a smaller button */
+        font-size: 16px;  /* Smaller font size for better readability */
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-position 0.5s, transform 0.2s;
+        background-size: 400%;
+    }
+
+    .animated-button:hover {
+        background-position: 100% 0;
+        transform: scale(1.1);
+    }
+</style>
+<!--    skill section-->
+    <section id="skills">
+        <h2>What Can I Do For You</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <h3>Django Developer</h3>
+                <p>Building Backend through django, also building REST API'S.</p>
+            </div>
+            <div class="skill">
+                <h3>SQLite</h3>
+                <p>Specialized In Sqlite 3 </p>
+            </div>
+            <div class="skill">
+                <h3>Mobile App Development</h3>
+                <p>Creating mobile applications for various platforms.</p>
+            </div>
+        </div>
+    </section>
+<!--    portfolio section-->
+ <section id="portfolio">
+    <h2 class="animate_animated animate_fadeIn">Portfolio</h2>
+    <h3 class="animate_animated animate_fadeIn">You can see my projects source code by clicking on them!</h3>
+    <div class="portfolio-container">
+        <div class="project animate_animated animate_zoomIn">
+            <a href="https://github.com/nota63/advanced-python-compiler-using-tkinter">
+                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/9d2e8896750899.5eb54f3381452.png" alt="Project Image" class="icon">
+                <h3>An Advanced Python Compiler</h3>
+            </a>
+        </div>
+        <div class="project animate_animated animate_zoomIn">
+            <a href="https://github.com/nota63/screenrecorder">
+                <img src="https://th.bing.com/th/id/OIP.g-Nw9MD4LfdgipRDhGe3QgHaHa?rs=1&pid=ImgDetMain" alt="Project Image" class="icon">
+                <h3>A Desktop Screen Recorder</h3>
+            </a>
+        </div>
+        <div class="project animate_animated animate_zoomIn">
+            <a href="https://github.com/nota63/digital-clock-by-tkinter">
+                <img src="https://th.bing.com/th/id/OIP.X8nv-x-yyLnasgFf_ZQNEAHaE7?rs=1&pid=ImgDetMain" alt="Project Image" class="icon">
+                <h3>Digital Clock By Python</h3>
+            </a>
+        </div>
+        <div class="project animate_animated animate_zoomIn">
+            <a href="https://github.com/nota63/Qr-Code_Generator-Static-">
+                <img src="https://cdn.dribbble.com/users/374494/screenshots/10807195/qr_code_generator_4x.png" alt="Project Image" class="icon">
+                <h3>QR Code Generator</h3>
+            </a>
+        </div>
+        <div class="project animate_animated animate_zoomIn">
+            <a href="https://github.com/nota63/Python-Turtle-Graphics">
+                <img src="https://th.bing.com/th/id/OIP.LYgeaeBsJieMn_raAL204AHaHa?w=1200&h=1200&rs=1&pid=ImgDetMain" alt="Project Image" class="icon">
+                <h3>Python Turtle Graphics</h3>
+            </a>
+        </div>
+        <div class="project animate_animated animate_zoomIn">
+            <a href="https://github.com/nota63/Jarvis_AI">
+                <img src="https://cdn.dribbble.com/users/1161944/screenshots/15901573/jarvis_logo_intro_dribbble_2_4x.png" alt="Project Image" class="icon">
+                <h3>AN AI Chatbot</h3>
+            </a>
+        </div>
+        <div class="project animate_animated animate_zoomIn">
+            <a href="https://github.com/nota63?page=1&tab=repositories">
+                <img src="https://allvectorlogo.com/img/2021/12/github-logo-vector.png" alt="Project Image" class="icon">
+                <h3>+ 10 More</h3>
+            </a>
+        </div>
+    </div>
+</section>
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonials-container">
+            <div class="testimonial">
+                <p>"Harshad! is a fantastic developer!" - Client A</p>
+            </div>
+            <div class="testimonial">
+                <p>"Great to work with and very skilled." - Client B</p>
+            </div>
+        </div>
+    </section>
+
+<!--    virtual section-->
+    <footer>
+        <p>&copy; Powered By <img src="{% static 'd.jpeg' %}" alt="Django" height="15"> </p>
+    </footer>
+       <script src="{% static 'script.js' %}"></script>
+</body>
+</html>
+
+

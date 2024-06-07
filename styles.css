@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background: linear-gradient(135deg, #1e90ff, #ff7f50);
+    padding: 20px;
+    border-radius: 0 0 50% 50%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 1200px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-weight: 600;
+}
+
+.nav-links li a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+.social-links a {
+    margin-left: 10px;
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a::before, .social-links a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.5);
+    animation: magicalLights 1.5s infinite alternate;
+    opacity: 0;
+}
+
+.social-links a::after {
+    animation-delay: 0.75s;
+}
+
+.social-links a:hover {
+    transform: rotate(360deg);
+}
+
+.intro {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #ff7f50, #1e90ff);
+    border-radius: 50% 50% 0 0;
+    width: 100%;
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.intro h1 span {
+    color: #ffcc00;
+}
+
+.buttons .btn {
+    background: linear-gradient(135deg, #ffcc00, #ff7f50);
+    color: #000000;
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.buttons .btn:hover {
+    background: linear-gradient(135deg, #ffcc00, #e94e3a);
+    transform: scale(1.1);
+}
+
+.profile-pic img {
+    width: 200px;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
+    animation: bounce 2s infinite;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* styles.css */
+/* styles.css */
+section {
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin: 20px;
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px;
+}
+
+.skills-container, .portfolio-container, .testimonials-container {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill, .project, .testimonial {
+    background: linear-gradient(135deg, #1e90ff, #ff7f50);
+    padding: 25px;
+    border-radius: 500px;
+    flex: 1;
+    min-width: 50px;
+    color: #ffffff;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 50px;
+}
+
+.skill:hover, .project:hover, .testimonial:hover {
+    transform: scale(1.05);
+}
+
+/* Update the portfolio container style */
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Update the project style */
+.project {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 50px;
+    transition: transform 0.3s ease;
+    animation: changeColor 5s infinite alternate;
+    margin: 50px;
+}
+
+/* Update the project image style */
+.project img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 50px;
+}
+
+/* Social media icons styles */
+.social-icon {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon.instagram {
+    color: #E1306C;
+}
+
+.social-icon.github {
+    color: #333;
+}
+
+.social-icon.facebook {
+    color: #3b5998;
+}
+
+.social-icon.linkedin {
+    color: #0077b5;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+@keyframes changeColor {
+    0% {
+        background-color: #ffffff;
+    }
+    100% {
+        background-color: #f0f0f0;
+    }
+}
+
+@keyframes magicalLights {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* General styles for the iframe sections */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    padding: 20px;
+    background: #1e1e1e;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Styles for the content and blackbox divs */
+.content, .blackbox {
+    position: relative;
+    overflow: hidden;
+    padding: 10px; /* Add some padding to make space for the frame */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content::before, .blackbox::before {
+    content: '';
+    position: absolute;
+    top: -10px; /* Adjusted to create the frame effect */
+    left: -10px; /* Adjusted to create the frame effect */
+    right: -10px; /* Adjusted to create the frame effect */
+    bottom: -10px; /* Adjusted to create the frame effect */
+    border-radius: 20px;
+    background: linear-gradient(45deg, #add8e6, #b0e0e6, #87ceeb, #b0c4de, #add8e6);
+    background-size: 400% 400%;
+    z-index: -1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content:hover, .blackbox:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.content:hover::before, .blackbox:hover::before {
+    transform: translateY(10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+    text-align: center;
+}
+
+.frame {
+    position: relative;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #ff6b6b, #f7d794, #1dd1a1, #54a0ff, #5f27cd);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.frame:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px 10px rgba(0, 123, 255, 0.5);
+}
+
+.frame img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    transition: transform 0.5s;
+}
+
+.frame:hover img {
+    transform: rotateY(15deg) rotateX(15deg);
+}
+
+.about1, .inventory {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    margin-top: 10px;
+    color: #333;
+    font-size: 16px;
+}
